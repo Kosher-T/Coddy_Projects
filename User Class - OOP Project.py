@@ -1,5 +1,5 @@
 class User:
-    def __init__(self, username: str, email: str):
+    def __init__(self, username, email):
         self.username = username
         self.email = email
         self._location = "unset"
@@ -8,7 +8,7 @@ class User:
     def getLocation(self):
         return self._location
 
-    def setLocation(self, location):
+    def setLocation(self, location: str):
         self._location = location
     
     def info(self):
