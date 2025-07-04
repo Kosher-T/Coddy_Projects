@@ -12,3 +12,6 @@ class Stack:
 
     def pop(self):
         return self.elem.pop(-1)
+
+    def size(self):
+        return len(self.elem)
