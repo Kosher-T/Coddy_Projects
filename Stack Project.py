@@ -15,3 +15,8 @@ class Stack:
 
     def size(self):
         return len(self.elem)
+
+    def empty(self):
+        if not self.stack:
+            return 'true'
+        return 'false'
