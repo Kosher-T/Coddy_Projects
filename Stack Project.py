@@ -9,3 +9,6 @@ class Stack:
 
     def top(self):
         return self.elem[-1]
+
+    def pop(self):
+        return self.elem.pop(-1)
