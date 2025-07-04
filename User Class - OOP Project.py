@@ -19,3 +19,8 @@ class User:
             self.skills[skill] = 1
         else:
             self.skills[skill] += 1
+
+    
+    def showSkills(self):
+        for key, val in sorted(self.skills.items()):
+            print(f"{key}: {val}")
