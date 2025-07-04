@@ -6,3 +6,6 @@ class Stack:
         
     def push(self, a):
         self.elem.append(a)
+
+    def top(self):
+        return self.elem[-1]
