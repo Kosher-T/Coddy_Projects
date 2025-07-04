@@ -2,19 +2,19 @@ class Stack:
 
     def __init__(self):
         # Write code here
-        self.elem = []
+        self.stack = []
         
     def push(self, a):
-        self.elem.append(a)
+        self.stack.append(a)
 
     def top(self):
-        return self.elem[-1]
+        return self.stack[-1]
 
     def pop(self):
-        return self.elem.pop(-1)
+        return self.stack.pop(-1)
 
     def size(self):
-        return len(self.elem)
+        return len(self.stack)
 
     def empty(self):
         if not self.stack:
