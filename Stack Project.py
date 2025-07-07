@@ -20,3 +20,14 @@ class Stack:
         if not self.stack:
             return 'true'
         return 'false'
+
+
+def reverse(a):
+    # Write code here
+    new = []
+    obj = Stack()
+    for each in a:
+        obj.push(each)
+    for each in range(0, len(a)):
+        new.append(obj.pop())
+    return new
