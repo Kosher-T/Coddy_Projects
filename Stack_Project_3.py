@@ -44,7 +44,10 @@ def isBalanacedParentheses(s):
     my_stack = Stack()
     my_stack.push(s)
 
-    for item in my_stack:
+    count[my_stack.top()] = 0  # Initialize count for the first character
+    return count  # Debugging line to check the stack content
+
+    '''for item in my_stack:
         if item in opening:
             my_stack.push(item)
             count[item] = count.get(item, 0) + 1
@@ -66,7 +69,7 @@ def isBalanacedParentheses(s):
             return 'false'
 
     return 'true' if my_stack.empty() else 'false'
-
+'''
 
 # Example usage
 if __name__ == "__main__":
