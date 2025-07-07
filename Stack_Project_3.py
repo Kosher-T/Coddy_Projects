@@ -68,12 +68,3 @@ def isBalanacedParentheses(s):
     return 'true' if my_stack.empty() else 'false'
 
 
-# Example usage
-if __name__ == "__main__":
-    print(isBalanacedParentheses("()[]{}"))  # Output: true
-    print(isBalanacedParentheses("(]"))      # Output: false
-    print(isBalanacedParentheses("([{}])"))  # Output: true
-    print(isBalanacedParentheses("{[()]}"))  # Output: true
-    print(isBalanacedParentheses("{[(])}"))  # Output: false
-    print(isBalanacedParentheses("((()))"))  # Output: true
-    print(isBalanacedParentheses(")("))      # Output: false
