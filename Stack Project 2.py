@@ -5,7 +5,11 @@ class Stack:
         self.stack = []
 
     def push(self, b):
-        self.stack.append(b)
+        if isinstance(b, list):
+            for item in b:
+                self.stack.append(item)
+        else:
+            self.stack.append(b)
 
     def top(self):
         return self.stack[-1]
@@ -34,22 +38,21 @@ def nse(a):
     # Initialize variables I will need. I will skip the first element of a
     # a = [3, 4, 2, 7, 5, 8]
     result = [-1]
+    b = a[1:]
     # create object of the stack first
     my_stack = Stack()
-    # Need to push elements to the stack
-    for current_index in range(len(a)):  # current_index = iter(1, 2, 3, 4, 5)
-        for current_element in a[0:current_index]:  # current_element = iter(3, 4, 2, 7, 5, 8) (for current_index == 6, result = [-1, 3, -1, 2, 2]).
-            my_stack.push(current_element)  # self.stack = []
-        print(my_stack.stack)  # minimum = 
-        
-        '''
-        if minimum == a[current_index]:  # a[current_index] = a[2] = 2. True
-            result.append(-1)
+    my_stack.push(a[0])  # Push the first element of a to the stack
+    for index, value in enumerate(b):
+        if index == 0:
+            my_stack.push(value)
         else:
-            result.append(minimum)
-    
-    return result
-'''
+            my_stack.push(b[0:index+1])
+        for item in my_stack.stack:
+            if item < value:
+                result.append(item)
+                break
+            else:
+                result.append(-1)
 
 # Example usage
 if __name__ == "__main__":
