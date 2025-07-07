@@ -53,6 +53,9 @@ def nse(a):
                 break
             else:
                 result.append(-1)
+        my_stack.reset()
+
+    return result
 
 # Example usage
 if __name__ == "__main__":
