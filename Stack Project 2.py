@@ -35,24 +35,28 @@ class Stack:
 
 
 def nse(a):
-    # Initialize variables I will need. I will skip the first element of a
-    # a = [3, 4, 2, 7, 5, 8]
+    # Write code here
     result = [-1]
     b = a[1:]
-    # create object of the stack first
+
     my_stack = Stack()
-    my_stack.push(a[0])  # Push the first element of a to the stack
+    my_stack.push(a[0])
+
     for index, value in enumerate(b):
         if index == 0:
             my_stack.push(value)
         else:
             my_stack.push(b[0:index+1])
-        for item in my_stack.stack:
+
+        for count in range(my_stack.size()):
+            item = my_stack.pop()
             if item < value:
                 result.append(item)
                 break
-            else:
+            elif item >= value and my_stack.size() == 0:
                 result.append(-1)
+                break
+
         my_stack.reset()
 
     return result
