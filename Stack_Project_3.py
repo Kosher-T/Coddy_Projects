@@ -37,7 +37,7 @@ class Stack:
         # This should return a boolean, not a string.
         return len(self.items) == 0
 
-def is_balanced_parentheses(s):
+def isBalanacedParentheses(s):
     """
     Checks if a string of parentheses is balanced using a stack.
 
@@ -78,3 +78,14 @@ def is_balanced_parentheses(s):
     # After the loop, if the stack is empty, it means every opening
     # bracket had a matching closing bracket. Otherwise, it's unbalanced.
     return stack.is_empty()
+
+
+# Example usage
+if __name__ == "__main__":
+    print(isBalanacedParentheses("()[]{}"))  # Output: true
+    print(isBalanacedParentheses("(]"))      # Output: false
+    print(isBalanacedParentheses("([{}])"))  # Output: true
+    print(isBalanacedParentheses("{[()]}"))  # Output: true
+    print(isBalanacedParentheses("{[(])}"))  # Output: false
+    print(isBalanacedParentheses("((()))"))  # Output: true
+    print(isBalanacedParentheses(")("))      # Output: false
